@@ -1,15 +1,12 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import MainMenu from './components/MainMenu.vue'
 </script>
 
 <template>
   <div class="page-wrapper">
-    <div class="page-header">
-      <nav>
-        <span class="spacer-1"><RouterLink to="/">Home</RouterLink></span>
-        <span class="spacer-1"><RouterLink to="/about">About</RouterLink></span>
-      </nav>
-    </div>
+
+    <MainMenu />
+
     <div class="page-content">
       <aside class="left-column">
         <div class="left-column-header"> 
@@ -57,17 +54,6 @@ list-style: none;
   flex-direction: column;
   border: solid 1px #222;
 }
-.spacer-1{
-  padding: 10px;
-}
-
-.page-header, 
-.page-footer {
-  height: 30px;
-  flex-shrink: 0;
- line-height: 30px;
- padding: 0 8px
- }
 
 .page-content {
   border-top: solid 1px #222;
