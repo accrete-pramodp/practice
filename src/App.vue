@@ -1,13 +1,17 @@
 <script setup>
 import MainMenu from './components/MainMenu.vue'
+import MainPage from './components/MainPage.vue'
 </script>
 
 <template>
   <div class="page-wrapper">
-
+    
     <MainMenu />
-
     <div class="page-content">
+    <MainPage />
+    </div>
+
+    <!--<div class="page-content">
       <aside class="left-column">
         <div class="left-column-header"> 
           <div class="search-input-wrapper">
@@ -28,7 +32,7 @@ import MainMenu from './components/MainMenu.vue'
       <main class="right-column">
         <RouterView />
       </main>
-    </div>
+    </div>-->
 
     <div class="page-footer">Footer</div>
   </div>
