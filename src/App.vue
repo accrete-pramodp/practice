@@ -8,8 +8,10 @@ import MainPage from './components/MainPage.vue'
     
     <MainMenu />
     <div class="page-content">
-    <MainPage />
+      <RouterView />
+    <!--<MainPage />-->
     </div>
+
 
     <!--<div class="page-content">
       <aside class="left-column">
