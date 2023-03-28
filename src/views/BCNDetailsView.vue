@@ -11,39 +11,68 @@ const lists = [
         id: 1,
         title: 'Business contract Number',
         number: 2233,
-        aggrmentNo: 1234
+        branch: 'Banayan Park',
+        email: 'test2233@test.com',
+        aggrmentNo: 1234,
+        Manager: 'test1234'
     },
     {
         id: 2,
         title: 'Business contract Number',
         number: 6789,
-        aggrmentNo: 1234
+        branch: 'Olympus',
+        email: 'test6789@test.com',
+        aggrmentNo: 1234,
+        Manager: 'test1234'
     },
     {
         id: 3,
         title: 'Business contract Number',
         number: 6677,
-        aggrmentNo: 1234
+        branch: 'Sahyadri Park',
+        email: 'test6677@test.com',
+        aggrmentNo: 1234,
+        Manager: 'test1234'
     },
     {
-        id: 3,
+        id: 4,
         title: 'Business contract Number',
         number: 9999,
-        aggrmentNo: 5678
+        branch: 'Olympus',
+        email: 'test9999@test.com',
+        aggrmentNo: 5678,
+        Manager: 'test5678'
     },
     {
-        id: 3,
+        id: 5,
         title: 'Business contract Number',
         number: 1010,
-        aggrmentNo: 5678
+        branch: 'Quadra-II',
+        email: 'test1010@test.com',
+        aggrmentNo: 5678,
+        Manager: 'test5678'
     },
 ];
 
 const custData = reactive({
-    id: 1234
+    id: 1,
+    title: 'Business contract Number',
+    number: 2233,
+    aggrmentNo: 1234,
+    branch: 'Banayan Park',
+    email: 'test2233@test.com',
+    aggrmentNo: 1234,
+    Manager: 'test1234'
 })
-const getDetails = id => {
-    custData.id = id
+const getDetails = list => {
+    custData.id = list.id,
+    custData.title = list.title,
+    custData.number = list.number,
+    custData.aggrmentNo = list.aggrmentNo
+    custData.branch = list.branch,
+    custData.email = list.email,
+    custData.aggrmentNo = list.aggrmentNo,
+    custData.Manager = list.Manager
 }
 
 </script>
@@ -69,7 +98,7 @@ const getDetails = id => {
             </div>
             <div>
                 <ul style="cursor:pointer">
-                    <li v-for="list in lists" :key="list.id" @click="getDetails(list.number)">
+                    <li v-for="list in lists" :key="list.id" @click="getDetails(list)">
                         <span>{{list.title}}</span>
                         <span style="float:right">{{list.number}}</span>
                     </li>
@@ -79,8 +108,8 @@ const getDetails = id => {
         </div>
         <!--<div class="flextwo"><BCNDetails :detailsFor="custData.id" /></div> --> 
         <div class="flextwo">
-            <RenderToIFrame>
-                <BCNDetails :detailsFor="custData.id" />
+            <RenderToIFrame style="border:2px solid green;">
+                <BCNDetails :detailsFor="custData" />
                 <!--<div>I am in iframe</div>-->
             </RenderToIFrame>
         </div>      

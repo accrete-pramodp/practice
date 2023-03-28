@@ -1,9 +1,11 @@
 <script setup>
-import {reactive, computed, watch} from 'vue'
+import {ref, reactive, computed, watch} from 'vue'
+import Child from '../components/Child.vue'
 
 const homeData = reactive({
   mainText: 'This is my Home Page',
-  counter: 0
+  counter: 0,
+  childText: ''
 })
 
 const increaseCounter = count => {
@@ -26,6 +28,12 @@ const getOddOrEven = computed(() => {
   return 'odd'
 })
 
+
+const changedValue = (val) => {
+  console.log(val)
+  homeData.childText = val
+}
+
 </script>
 
 <template>
@@ -39,6 +47,10 @@ const getOddOrEven = computed(() => {
       <button class="spacer-2" @click="increaseCounter(2)">++</button>
     </div>
     <h2>Above value is {{getOddOrEven}}</h2>
+    <hr />
+    <Child @changedText="changedValue" />
+    <br>
+    {{homeData.childText}}
   </div>
 </template>
 

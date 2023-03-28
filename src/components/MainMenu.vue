@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <nav>
             <span class="spacer-1"><RouterLink to="/">Home</RouterLink></span>
             <span class="spacer-1"><RouterLink to="/about">About</RouterLink></span>
-            <!--<span class="spacer-1"><RouterLink to="/practice">Practice</RouterLink></span>-->
+            <span class="spacer-1"><RouterLink to="/practice">Practice</RouterLink></span>
         </nav>
     </div>
 </template>

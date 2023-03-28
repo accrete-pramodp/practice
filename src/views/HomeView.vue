@@ -25,7 +25,7 @@ import { useRouter, useRoute } from 'vue-router'
 <template>
   <div class="home">
     <!--<iframe src="http://ndtv.com" height="480px" width="950px"></iframe>-->
-      <div class="card spacer-1">
+      <div class="card mt-5 ms-5">
           <div class="card-header text-bg-success ">
               Please select a business contact Id:
           </div>
@@ -41,11 +41,6 @@ import { useRouter, useRoute } from 'vue-router'
 </template>
 
 <style scoped>
-.spacer-2{
-  padding: 5px;
-  margin-left: 10px;
-  font-size: 30px;
-}
 .search-area {
     margin-left: 100px;
     width: 100%;
@@ -53,10 +48,6 @@ import { useRouter, useRoute } from 'vue-router'
 .btn-spacer {
     margin-top: 10px;
     margin-left: 150px;
-}
-.spacer-1{
-  margin-left: 100px;
-  margin-top: 150px;
 }
 
 </style>
