@@ -1,6 +1,7 @@
 <script setup>
 import {ref, reactive, computed, watch} from 'vue'
 import Child from '../components/Child.vue'
+import Parent from '../components/Parent.vue'
 
 const homeData = reactive({
   mainText: 'This is my Home Page',
@@ -51,6 +52,9 @@ const changedValue = (val) => {
     <Child @changedText="changedValue" />
     <br>
     {{homeData.childText}}
+
+    <hr />
+    <Parent />
   </div>
 </template>
 
